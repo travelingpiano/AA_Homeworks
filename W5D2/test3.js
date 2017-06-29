@@ -1,0 +1,73 @@
+function printCallback(array){
+  array.forEach(function(x){
+    console.log(x);
+  });
+}
+
+function titleize(array, printCallback){
+  var answer = array.map(function(x){
+    return "Mx. " + x + " Jinglehemier Schmidt";
+  });
+  printCallback(answer);
+}
+
+function Elephant(name,height,tricks){
+  this.name = name;
+  this.height = height;
+  this.tricks = tricks;
+}
+
+Elephant.prototype.trumpet = function(){
+  var x = this.name + " the elephant goes 'phrRRRRRRRRR!!!!!'";
+  console.log(x);
+};
+
+Elephant.prototype.grow = function(){
+  this.height += 12;
+};
+
+function getRandomInt(min,max){
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random()*(max-min))+min;
+}
+
+Elephant.prototype.addTrick = function(trick){
+  this.tricks.push(trick);
+};
+
+Elephant.prototype.play = function(){
+  var index = getRandomInt(0,this.tricks.length);
+  console.log(this.tricks[index]);
+};
+
+function paradeHelper(elephant){
+  var text = elephant.name + " is trotting by!";
+  console.log(text);
+}
+
+function dinerBreakfast(items){
+  let order = "I'd like cheesy scrambled eggs please";
+  return function add_item(food){
+    order = order + ' and ' + food;
+    console.log(order);
+  };
+}
+
+let x = new Elephant('jumbo',5,['balls','beach balls']);
+x.trumpet();
+x.play();
+
+let ellie = new Elephant("Ellie", 185, ["giving human friends a ride", "playing hide and seek"]);
+let charlie = new Elephant("Charlie", 200, ["painting pictures", "spraying water for a slip and slide"]);
+let kate = new Elephant("Kate", 234, ["writing letters", "stealing peanuts"]);
+let micah = new Elephant("Micah", 143, ["trotting", "playing tic tac toe", "doing elephant ballet"]);
+
+let herd = [ellie, charlie, kate, micah];
+herd.forEach(paradeHelper);
+
+titleize(["Mary", "Brian", "Leo"], printCallback);
+
+let bfastOrder = dinerBreakfast();
+bfastOrder("chocolate chip pancakes");
+bfastOrder("grits");
