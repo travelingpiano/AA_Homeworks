@@ -25,17 +25,18 @@
       <ul>
         <li><a href="#descriptions">Descriptions</a></li>
         <li><a href="#ingredients">Ingredients</a></li>
+        <li><a href="#directions">Directions</a></li>
       </ul>
     </nav>
-    <aside>
-      <h2 class="ingredients-list" id=ingredients>Ingredients</h2>
-      <ul>
-        <li>Juicy Chicken</li>
-        <li>Flour</li>
-        <li>Oil</li>
-      </ul>
-    </aside>
   </header>
+  <aside>
+    <h2 class="ingredients-list" id=ingredients>Ingredients</h2>
+    <ul>
+      <li>Juicy Chicken</li>
+      <li>Flour</li>
+      <li>Oil</li>
+    </ul>
+  </aside>
   <section>
     <h2>Fried Chicken</h2>
     <figure>
@@ -47,36 +48,25 @@
 
     <h2 id=descriptions>Description</h2>
     <p>To tell you how to make fried chicken</p>
-    <h2 class=directions>Directions</h2>
+    <h2 id=directions class=directions>Directions</h2>
     <ol>
       <li>Clean the chicken</li>
       <li>Wrap it around with flour</li>
       <li>Fry up the oil</li>
       <li>Put chicken in oil</li>
     </ol>
-  </section>
-  <section>
     <form action="/reviews" method="post">
       <h1>Reviews</h1>
       <br>
       <label for="name">Name</label>
       <input id="name" type="text" name="reviews[name]" value="">
       <br>
-      <label for="rating">Rating</label>
       <br>
       1<input type="radio" name="rating" value="1" checked>
-      <br>
       2<input type="radio" name="rating" value="2">
-      <br>
       3<input type="radio" name="rating" value="3">
-      <br>
       4<input type="radio" name="rating" value="4">
-      <br>
       5<input type="radio" name="rating" value="5">
-      <br>
-      <br>
-      <label for="cooking_expertise">Cooking Expertise</label>
-      <br>
       <select name="cooking_expertise">
         <option disabled selected>Please Select</option>
         <option value="Sometimes Cook">Sometimes Cook</option>
@@ -85,9 +75,7 @@
         <option value="Professional Chef">Professional Chef</option>
       </select>
       <br>
-      <label>Review
-        <textarea name="review" rows="8" cols="80"></textarea>
-      </label>
+      <textarea name="review" rows="8" cols="80"></textarea>
       <br>
       <input type="submit" value="Submit Review">
     </form>
