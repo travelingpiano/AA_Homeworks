@@ -1,0 +1,19 @@
+html,body,section,h1,h2,p,article,header,img,nav,ul,ol,li,aside,figure,figcation,form,label,option,input,textarea,footer,select{
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+  background: transparent;
+}
+
+select,input[type="radio"],input[type="submit"]{
+  cursor: pointer;
+  outline: none;
+}
+
+input:last-child:hover{
+  background-color: "gold";
+}
