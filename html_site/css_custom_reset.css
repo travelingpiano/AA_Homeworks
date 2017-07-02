@@ -4,7 +4,7 @@ html,body,section,h1,h2,p,article,header,img,nav,ul,ol,li,aside,figure,figcation
   padding: 0;
   font: inherit;
   text-align: inherit;
-  text-decoration: inherit;
+  text-decoration: none;
   color: inherit;
   background: transparent;
 }
@@ -12,6 +12,16 @@ html,body,section,h1,h2,p,article,header,img,nav,ul,ol,li,aside,figure,figcation
 select,input[type="radio"],input[type="submit"]{
   cursor: pointer;
   outline: none;
+}
+
+header img {
+  float: left;
+}
+
+.clear-fix:after{
+  display: block;
+  clear: both;
+  content: "";
 }
 
 input{
@@ -51,7 +61,7 @@ img{
 }
 
 nav{
-  display: inline-block;
+  float: right;
 }
 
 nav ul li{
@@ -64,32 +74,15 @@ nav ul li a{
 }
 
 body{
-  width: 900px;
   margin: 0 auto;
-}
-
-section{
-  width: 700px;
-  display: inline-block;
-  vertical-align: top;
+  width: 100%;
 }
 
 aside{
-  width: 180px;
   display: inline-block;
-  margin-right: 15px;
-}
-
-aside ul li{
-  margin: 15px 0px;
-}
-
-section ol li{
-  margin: 15px 0px;
 }
 
 select{
-  display: block;
   margin: 15px;
   width: 200px;
 }
@@ -99,7 +92,7 @@ input["text"]{
 }
 
 textarea{
-  width: 500px;
+  width: 350px;
 }
 
 h1{

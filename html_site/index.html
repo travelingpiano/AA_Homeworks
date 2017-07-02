@@ -17,10 +17,12 @@
     </script>
     <!-- <link rel="stylesheet" href="https://github.com/travelingpiano/AA_Homeworks/blob/gh-pages/html_site/css_reset.css"> -->
     <link rel="stylesheet" href="./css_custom_reset.css">
+    <link rel="stylesheet" href="./custom_grid.css">
   </head>
 
-  <header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Appacademylogo.png" alt="app academy logo" style = "width:300px,height:300px;"/>
+  <header class="clear-fix">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Appacademylogo.png" alt="app academy logo"/>
+
     <nav>
       <ul>
         <li><a href="#descriptions">Descriptions</a></li>
@@ -29,57 +31,62 @@
       </ul>
     </nav>
   </header>
-  <aside>
-    <h2 class="ingredients-list" id=ingredients>Ingredients</h2>
-    <ul>
-      <li>Juicy Chicken</li>
-      <li>Flour</li>
-      <li>Oil</li>
-    </ul>
-  </aside>
-  <section>
-    <h2>Fried Chicken</h2>
-    <figure>
-      <img src="https://static01.nyt.com/images/2016/06/28/dining/28COOKING-FRIEDCHICKENGUIDE13/28COOKING-FRIEDCHICKENGUIDE13-superJumbo.jpg" alt="fried chicken image" style="width:200px;height:200px;"/>
-      <figcaption>
-        <a href="https://en.wikipedia.org/wiki/Fried_chicken">Wiki Fried Chicken</a>
-      </figcaption>
-    </figure>
+  <div class="col col-1-3">
+    <aside>
+      <h2 class="ingredients-list" id=ingredients>Ingredients</h2>
+      <ul>
+        <li>Juicy Chicken</li>
+        <li>Flour</li>
+        <li>Oil</li>
+      </ul>
+    </aside>
+  </div>
+  <div class="col col-2-3">
+    <section>
+      <h2>Fried Chicken</h2>
+      <figure>
+        <img src="https://static01.nyt.com/images/2016/06/28/dining/28COOKING-FRIEDCHICKENGUIDE13/28COOKING-FRIEDCHICKENGUIDE13-superJumbo.jpg" alt="fried chicken image" style="width:200px;height:200px;"/>
+        <figcaption>
+          <a href="https://en.wikipedia.org/wiki/Fried_chicken">Wiki Fried Chicken</a>
+        </figcaption>
+      </figure>
 
-    <h2 id=descriptions>Description</h2>
-    <p>To tell you how to make fried chicken</p>
-    <h2 id=directions class=directions>Directions</h2>
-    <ol>
-      <li>Clean the chicken</li>
-      <li>Wrap it around with flour</li>
-      <li>Fry up the oil</li>
-      <li>Put chicken in oil</li>
-    </ol>
-    <form action="/reviews" method="post">
-      <h1>Reviews</h1>
-      <br>
-      <label for="name">Name</label>
-      <input id="name" type="text" name="reviews[name]" value="">
-      <br>
-      <br>
-      1<input type="radio" name="rating" value="1" checked>
-      2<input type="radio" name="rating" value="2">
-      3<input type="radio" name="rating" value="3">
-      4<input type="radio" name="rating" value="4">
-      5<input type="radio" name="rating" value="5">
-      <select name="cooking_expertise">
-        <option disabled selected>Please Select</option>
-        <option value="Sometimes Cook">Sometimes Cook</option>
-        <option value="Cook Everyday">Cook Everyday</option>
-        <option value="Cooking is a Hobby">Cooking is a Hobby</option>
-        <option value="Professional Chef">Professional Chef</option>
-      </select>
-      <br>
-      <textarea name="review" rows="8" cols="80"></textarea>
-      <br>
-      <input type="submit" value="Submit Review">
-    </form>
-  </section>
+      <h2 id=descriptions>Description</h2>
+      <p>To tell you how to make fried chicken</p>
+      <h2 id=directions class=directions>Directions</h2>
+      <ol>
+        <li>Clean the chicken</li>
+        <li>Wrap it around with flour</li>
+        <li>Fry up the oil</li>
+        <li>Put chicken in oil</li>
+      </ol>
+      <form action="/reviews" method="post">
+        <h1>Reviews</h1>
+        <br>
+        <label for="name">Name</label>
+        <input id="name" type="text" name="reviews[name]" value="">
+        <br>
+        <br>
+        1<input type="radio" name="rating" value="1" checked>
+        2<input type="radio" name="rating" value="2">
+        3<input type="radio" name="rating" value="3">
+        4<input type="radio" name="rating" value="4">
+        5<input type="radio" name="rating" value="5">
+        <select name="cooking_expertise">
+          <option disabled selected>Please Select</option>
+          <option value="Sometimes Cook">Sometimes Cook</option>
+          <option value="Cook Everyday">Cook Everyday</option>
+          <option value="Cooking is a Hobby">Cooking is a Hobby</option>
+          <option value="Professional Chef">Professional Chef</option>
+        </select>
+        <br>
+        <textarea name="review" rows="8" cols="80"></textarea>
+        <br>
+        <input type="submit" value="Submit Review">
+      </form>
+    </section>
+  </div>
+
   <footer>
     <p>Reciped originated from <a href="http://www.tasteofhome.com/recipes/crispy-fried-chicken">Taste of Home</a></p>
 
